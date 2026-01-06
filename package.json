@@ -7,11 +7,23 @@
   "bin": {
     "reminders-mcp": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagadeesh52423/remainders-mcp.git"
+  },
+  "homepage": "https://github.com/jagadeesh52423/remainders-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/jagadeesh52423/remainders-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
-    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

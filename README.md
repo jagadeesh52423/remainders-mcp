@@ -11,8 +11,13 @@ An MCP (Model Context Protocol) server for interacting with macOS Reminders app 
 ## Installation
 
 ```bash
-npm install
-npm run build
+npm install -g reminders-mcp
+```
+
+Or use directly with npx:
+
+```bash
+npx reminders-mcp
 ```
 
 ## Usage
@@ -25,8 +30,20 @@ Add to your MCP client configuration:
 {
   "mcpServers": {
     "reminders": {
-      "command": "node",
-      "args": ["/path/to/reminders-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["reminders-mcp"]
+    }
+  }
+}
+```
+
+Or if installed globally:
+
+```json
+{
+  "mcpServers": {
+    "reminders": {
+      "command": "reminders-mcp"
     }
   }
 }
@@ -35,6 +52,9 @@ Add to your MCP client configuration:
 ### Development
 
 ```bash
+git clone https://github.com/jagadeesh52423/remainders-mcp.git
+cd remainders-mcp
+npm install
 npm run dev        # Run with tsx
 npm run inspector  # Run with MCP inspector
 ```
