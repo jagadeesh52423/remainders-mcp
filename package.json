@@ -1,0 +1,35 @@
+{
+  "name": "reminders-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for macOS Reminders app",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "reminders-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "reminders",
+    "macos",
+    "applescript"
+  ],
+  "license": "MIT"
+}
